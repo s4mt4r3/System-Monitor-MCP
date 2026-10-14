@@ -1,5 +1,6 @@
 # sysmon-mcp
 ![demo](demo.gif)
+Full Demo (YouTube): https://youtu.be/XzmlkMPCu9Y?si=Uz0Y149h0oU_gpZ7
 
 A read-only MCP server that lets Claude inspect your machine's memory, processes, disks and listening ports. Built with FastMCP and psutil.
 
