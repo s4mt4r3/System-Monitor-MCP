@@ -1,0 +1,26 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "sysmon-mcp"
+version = "0.1.0"
+description = "Read-only system monitor MCP server"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.2.0,<2",  # FastMCP API; 2.x renamed it to MCPServer
+    "psutil>=5.9",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+sysmon-mcp = "sysmon_mcp.server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/sysmon_mcp"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
